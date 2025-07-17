@@ -2,9 +2,30 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Projects</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
+<h1>My Projects</h1>
+<div id="projects-container">
+    <!-- Projects will be dynamically loaded here -->
+</div>
+<script>
+    fetch('/projects')
+        .then(res => res.json())
+        .then(projects => {
+            const container = document.getElementById('projects-container');
+            projects.forEach(project => {
+                const div = document.createElement('div');
+                div.className = 'project-card';
+                div.innerHTML = `
+                        <h2>${project.title}</h2>
+                        <p>${project.description}</p>
+                        ${project.imageUrl ? `<img src="${project.imageUrl}" alt="${project.title}">` : ''}
+                    `;
+                container.appendChild(div);
+            });
+        });
+</script>
 </body>
 </html>

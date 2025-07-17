@@ -1,0 +1,37 @@
+body {
+    background: url('graph-paper.png');
+    font-family: 'Courier New', monospace;
+    color: #333;
+    padding: 2rem;
+}
+
+.container, .project-card {
+    background: #fffbe6;
+    border: 2px dashed yellow;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 10px;
+}
+
+.profile-photo {
+    border-radius: 50%;
+    width: 150px;
+}
+
+a {
+    color: goldenrod;
+    text-decoration: none;
+}
+
+h1 {
+    color: goldenrod;
+}
+
+/* Add flower accent (optional) */
+body::before {
+    content: "🌼";
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 2rem;
+}
