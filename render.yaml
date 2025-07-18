@@ -1,8 +1,9 @@
 services:
   - type: web
     name: portfolio-backend
-    env: docker
+    env: static
     plan: free
     buildCommand: ./gradlew build
     startCommand: java -jar build/libs/backend-0.0.1-SNAPSHOT.jar
+
 
