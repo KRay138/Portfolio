@@ -5,9 +5,9 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@CrossOrigin(origins = "*")
+@CrossOrigin(origins = "*") // Allow all origins; change as needed for security
 @RestController
-@RequestMapping("/api")
+@RequestMapping("/api") // Base URL will be /api/projects
 public class ProjectController {
 
     @GetMapping("/projects")
@@ -31,5 +31,3 @@ public class ProjectController {
         );
     }
 }
-
-
