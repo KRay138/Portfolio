@@ -1,11 +1,11 @@
-package controller;
+package com.portfolio.backend.controller;
 
 import com.portfolio.backend.model.Project;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@CrossOrigin(origins = "*") // Optional: Allow frontend from another origin
+@CrossOrigin(origins = "*")
 @RestController
 public class ProjectController {
 
@@ -30,4 +30,5 @@ public class ProjectController {
         );
     }
 }
+
 
