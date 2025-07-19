@@ -7,6 +7,7 @@ import java.util.List;
 
 @CrossOrigin(origins = "*")
 @RestController
+@RequestMapping("/api")
 public class ProjectController {
 
     @GetMapping("/projects")
