@@ -12,8 +12,8 @@
 </div>
 <script>
     // ✅ Updated fetch URL
-    fetch('https://portfolio-backend-neak.onrender.com/projects')
-        .then(res => res.json())
+    fetch('https://portfolio-backend-neak.onrender.com/api/projects')
+            .then(res => res.json())
         .then(projects => {
             const container = document.getElementById('projects-container');
             projects.forEach(project => {
